@@ -19,7 +19,6 @@ public class HelloController {
 
 
 
-
     private void start(){
         for (int o=0; o<15; o++){
             for (int s=0; s<10; s++){
@@ -28,8 +27,10 @@ public class HelloController {
                 pnJatek.getChildren();
             }
         }
+        onClickRandom();
         forog();
         onMouseDragged();
+        palya();
     }
 
     private void onMouseDragged(){
@@ -40,4 +41,18 @@ public class HelloController {
 
     }
 
+    private void onClickRandom(){
+        palya();
+    }
+
+    private void palya(){
+        for (int o=0; o<15; o++){
+            int random = (int)(Math.random()*10+1);
+            for (int s=0; s<random; s++){
+                pnJatek.getChildren().add(new ImageView(new Image(getClass().getResourceAsStream("box.png"))));
+                pnJatek.setTranslateX(10+s*64);
+                pnJatek.getChildren();
+            }
+        }
+    }
 }
