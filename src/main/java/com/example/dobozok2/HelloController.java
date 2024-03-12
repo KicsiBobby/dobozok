@@ -18,6 +18,8 @@ public class HelloController {
     @FXML private ImageView ivArrow;
 
 
+    private int box=0;
+    private int openbox=0;
 
     private void start(){
         for (int o=0; o<15; o++){
@@ -53,6 +55,20 @@ public class HelloController {
                 pnJatek.setTranslateX(10+s*64);
                 pnJatek.getChildren();
             }
+        }
+    }
+
+    private void onClickDoboz(){
+        if (doboz){
+            if (doboz-1 == "null.png"){
+                pnJatek.getChildren().add(new ImageView(new Image(getClass().getResourceAsStream("openbox.png"))));
+                openbox++;
+            }else{
+                return;
+            }
+        }else{
+            pnJatek.getChildren().add(new ImageView(new Image(getClass().getResourceAsStream("box.png"))));
+            box++;
         }
     }
 }
