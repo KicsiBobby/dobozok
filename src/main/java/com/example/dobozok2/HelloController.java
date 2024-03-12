@@ -19,15 +19,6 @@ public class HelloController {
 
 
 
-    @FXML private Pane pnJatek;
-    @FXML private Button btRandom;
-    @FXML private Label lbOpenbox;
-    @FXML private Label lbBox;
-    @FXML private ImageView ivOpenbox;
-    @FXML private ImageView ivBox;
-    @FXML private ImageView ivArrow;
-
-
 
     private void start(){
         for (int o=0; o<15; o++){
